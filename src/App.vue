@@ -7,8 +7,6 @@ defineComponent({
     RouterView,
   },
 });
-
-
 </script>
 
 <template>

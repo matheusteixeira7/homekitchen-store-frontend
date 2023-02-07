@@ -1,0 +1,181 @@
+{
+    "asd": [
+        {
+            "id": 1,
+            "name": "HENCKELS Premium Quality 15-Piece Knife Set with Block, Razor-Sharp, German Engineered Knife Informed by over 100 Years of Masterful Knife Making, Lightweight and Strong, Dishwasher Safe",
+            "color": "Natural",
+            "price": "$129,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/71FtjejRbvL._AC_SL1500_.jpg",
+            "imageAlt": "HENCKELS Premium Quality 15-Piece Knife Set."
+        },
+        {
+            "id": 2,
+            "name": "Syvio Knife Sets for Kitchen with Block, Kitchen Knife Sets 14 Piece with Built-in Sharpener, Kitchen Knives for Chopping, Slicing, Dicing&Cutting",
+            "color": "Black",
+            "price": "$49,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/61dDCif7poL._AC_SL1500_.jpg",
+            "imageAlt": "Syvio 14-piece Knife Set."
+        },
+        {
+            "id": 3,
+            "name": "Fancy Homi Pack of 2 Boho Decorative Throw Pillow Covers with Pom-poms, Soft Corduroy Accent Solid Square Cushion Case Set for Couch Sofa Bedroom Car Living Room (18x18 Inch/45x45 cm, Cream)",
+            "color": "Cream",
+            "price": "$15,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/61LbAUtQ+JL._AC_SL1001_.jpg",
+            "imageAlt": "Pillows."
+        },
+        {
+            "id": 4,
+            "name": "DEELAND Pack of 2 Faux Fur Plush Decorative Throw Pillow Covers Fuzzy Striped Soft Pillowcase Cushion Covers for Sofa Couch Bedroom 18x18 inch",
+            "color": "Cream",
+            "price": "$22,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/91B9hjMaebL._AC_SL1500_.jpg",
+            "imageAlt": "Pillows."
+        },
+        {
+            "id": 5,
+            "name": "JUSPURBET Decorative Lumbar Velvet Pillow Covers with Wave Striped,Pack of 2 Luxury Soft Cushion Cases for Couch Sofa Living Room,12x20 Inches,Turquoise",
+            "color": "Blue",
+            "price": "$15,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/812Z-yCDtAL._AC_SL1500_.jpg",
+            "imageAlt": "Pillows."
+        },
+        {
+            "id": 6,
+            "name": "Nestl White Duvet Cover Queen Size - Soft Queen Duvet Cover Set, 3 Piece Double Brushed Queen Size Duvet Covers with Button Closure, 1 Duvet Cover 90x90 inches and 2 Pillow Shams",
+            "color": "White",
+            "price": "$26,49",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/718JWEwJ2XL._AC_SL1500_.jpg",
+            "imageAlt": "A duvet cover over a bed."
+        },
+        {
+            "id": 7,
+            "name": "Brandream Kids Bedding Set Boy Twin Size Cars Trucks Construction Bedding Cotton 3-Piece Duvet Cover Set(No Comforter Included)",
+            "color": "White",
+            "price": "$69,90",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/81IKm2uMt2L._AC_SL1500_.jpg",
+            "imageAlt": "A duvet cover over a bed."
+        },
+        {
+            "id": 8,
+            "name": "FineDine 24-Piece Superior Glass Food Storage Containers Set - Newly Innovated Hinged Locking lids - 100% Leakproof Glass Meal-Prep Containers, Great On-the-Go & Freezer-to-Oven-Safe Food Containers",
+            "color": "Transparent",
+            "price": "$38,99",
+            "href": "#",
+            "imageSrc": "https://m.media-amazon.com/images/I/81X-71ShAVL._AC_SL1500_.jpg",
+            "imageAlt": "24 pieces of glass food storage."
+        }
+    ],
+    "products": [
+        {
+            "id": "ed8a355e-b352-4273-9ae7-cf64418325e8",
+            "name": "HENCKELS Premium Quality 15-Piece Knife Set with Block, Razor-Sharp, German Engineered Knife Informed by over 100 Years of Masterful Knife Making, Lightweight and Strong, Dishwasher Safe",
+            "price": "$140",
+            "rating": 4,
+            "images": [
+                {
+                    "id": "db7527b2-c870-425c-9b65-c20cc2d88541",
+                    "name": "Angled view",
+                    "src": "https://m.media-amazon.com/images/I/71FtjejRbvL._AC_SL1500_.jpg",
+                    "alt": "Angled front view with bag zipped and handles upright."
+                }
+            ],
+            "colors": [
+                {
+                    "name": "Natural",
+                    "bgColor": "bg-gray-700",
+                    "selectedColor": "ring-gray-700"
+                },
+                {
+                    "name": "White",
+                    "bgColor": "bg-white",
+                    "selectedColor": "ring-gray-400"
+                },
+                {
+                    "name": "Washed Gray",
+                    "bgColor": "bg-gray-500",
+                    "selectedColor": "ring-gray-500"
+                }
+            ],
+            "description": "\n    <p>The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.</p>\n  ",
+            "details": [
+                {
+                    "name": "Features",
+                    "items": [
+                        "Multiple strap configurations",
+                        "Spacious interior with top zip",
+                        "Leather handle and tabs",
+                        "Interior dividers",
+                        "Stainless strap loops",
+                        "Double stitched construction",
+                        "Water-resistant"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "92d2b811-fef0-4e02-b909-9ea0cc1f3195",
+            "name": "Zip Tote Basket 2",
+            "price": "$140",
+            "rating": 4,
+            "images": [
+                {
+                    "id": "c5dc52b0-752d-4ce3-a798-3ce3bc59873d",
+                    "name": "Angled view",
+                    "src": "https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg",
+                    "alt": "Angled front view with bag zipped and handles upright."
+                }
+            ],
+            "colors": [
+                {
+                    "name": "Washed Black",
+                    "bgColor": "bg-gray-700",
+                    "selectedColor": "ring-gray-700"
+                },
+                {
+                    "name": "White",
+                    "bgColor": "bg-white",
+                    "selectedColor": "ring-gray-400"
+                },
+                {
+                    "name": "Washed Gray",
+                    "bgColor": "bg-gray-500",
+                    "selectedColor": "ring-gray-500"
+                }
+            ],
+            "description": "\n    <p>The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.</p>\n  ",
+            "details": [
+                {
+                    "name": "Features",
+                    "items": [
+                        "Multiple strap configurations",
+                        "Spacious interior with top zip",
+                        "Leather handle and tabs",
+                        "Interior dividers",
+                        "Stainless strap loops",
+                        "Double stitched construction",
+                        "Water-resistant"
+                    ]
+                }
+            ]
+        }
+    ],
+    "related-products": [
+        {
+            "id": "19c9bc73-e035-44af-9a18-00e3d8aa558d",
+            "name": "Zip Tote Basket",
+            "color": "White and black",
+            "href": "#",
+            "imageSrc": "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
+            "imageAlt": "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
+            "price": "$140"
+        }
+    ]
+}
