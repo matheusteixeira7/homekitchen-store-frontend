@@ -9,26 +9,42 @@
           <!-- Image gallery -->
           <TabGroup as="div" class="flex flex-col-reverse">
             <!-- Image selector -->
-            <div class="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
+            <div
+              class="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none"
+            >
               <TabList class="grid grid-cols-4 gap-6">
-                <Tab v-for="image in product.images" :key="image.id"
+                <Tab
+                  v-for="image in product.images"
+                  :key="image.id"
                   class="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
-                  v-slot="{ selected }">
+                  v-slot="{ selected }"
+                >
                   <span class="sr-only"> {{ image.name }} </span>
                   <span class="absolute inset-0 overflow-hidden rounded-md">
-                    <img :src="image.src" alt="" class="h-full w-full object-cover object-center" />
+                    <img
+                      :src="image.src"
+                      alt=""
+                      class="h-full w-full object-cover object-center"
+                    />
                   </span>
-                  <span :class="[
-                    selected ? 'ring-indigo-500' : 'ring-transparent',
-                    'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2',
-                  ]" aria-hidden="true" />
+                  <span
+                    :class="[
+                      selected ? 'ring-indigo-500' : 'ring-transparent',
+                      'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2',
+                    ]"
+                    aria-hidden="true"
+                  />
                 </Tab>
               </TabList>
             </div>
 
             <TabPanels class="aspect-w-1 aspect-h-1 w-full">
               <TabPanel v-for="image in product.images" :key="image.id">
-                <img :src="image.src" :alt="image.alt" class="h-full w-full object-cover object-center sm:rounded-lg" />
+                <img
+                  :src="image.src"
+                  :alt="image.alt"
+                  class="h-full w-full object-cover object-center sm:rounded-lg"
+                />
               </TabPanel>
             </TabPanels>
           </TabGroup>
@@ -51,9 +67,12 @@
               <h3 class="sr-only">Reviews</h3>
               <div class="flex items-center">
                 <div class="flex items-center">
-                  <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating"
+                  <StarIcon
+                    v-for="rating in [0, 1, 2, 3, 4]"
+                    :key="rating"
                     :class="[product!.rating > rating ? 'text-indigo-500' : 'text-gray-300', 'h-5 w-5 flex-shrink-0']"
-                    aria-hidden="true" />
+                    aria-hidden="true"
+                  />
                 </div>
                 <p class="sr-only">{{ product.rating }} out of 5 stars</p>
               </div>
@@ -62,7 +81,10 @@
             <div class="mt-6">
               <h3 class="sr-only">Description</h3>
 
-              <div class="space-y-6 text-base text-gray-700" v-html="product.description" />
+              <div
+                class="space-y-6 text-base text-gray-700"
+                v-html="product.description"
+              />
             </div>
 
             <form class="mt-6">
@@ -75,21 +97,31 @@
                     Choose a color
                   </RadioGroupLabel>
                   <div class="flex items-center space-x-3">
-                    <RadioGroupOption as="template" v-for="color in product.colors" :key="color.name" :value="color"
-                      v-slot="{ active, checked }">
-                      <div :class="[
-                        color.selectedColor,
-                        active && checked ? 'ring ring-offset-1' : '',
-                        !active && checked ? 'ring-2' : '',
-                        '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
-                      ]">
+                    <RadioGroupOption
+                      as="template"
+                      v-for="color in product.colors"
+                      :key="color.name"
+                      :value="color"
+                      v-slot="{ active, checked }"
+                    >
+                      <div
+                        :class="[
+                          color.selectedColor,
+                          active && checked ? 'ring ring-offset-1' : '',
+                          !active && checked ? 'ring-2' : '',
+                          '-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none',
+                        ]"
+                      >
                         <RadioGroupLabel as="span" class="sr-only">
                           {{ color.name }}
                         </RadioGroupLabel>
-                        <span aria-hidden="true" :class="[
-                          color.bgColor,
-                          'h-8 w-8 border border-black border-opacity-10 rounded-full',
-                        ]" />
+                        <span
+                          aria-hidden="true"
+                          :class="[
+                            color.bgColor,
+                            'h-8 w-8 border border-black border-opacity-10 rounded-full',
+                          ]"
+                        />
                       </div>
                     </RadioGroupOption>
                   </div>
@@ -97,13 +129,17 @@
               </div>
 
               <div class="mt-10 flex">
-                <button type="submit"
-                  class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+                <button
+                  type="submit"
+                  class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+                >
                   Add to bag
                 </button>
 
-                <button type="button"
-                  class="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
+                <button
+                  type="button"
+                  class="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                >
                   <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
                   <span class="sr-only">Add to favorites</span>
                 </button>
@@ -114,18 +150,34 @@
               <h2 id="details-heading" class="sr-only">Additional details</h2>
 
               <div class="divide-y divide-gray-200 border-t">
-                <Disclosure as="div" v-for="detail in product.details" :key="detail.name" v-slot="{ open }">
+                <Disclosure
+                  as="div"
+                  v-for="detail in product.details"
+                  :key="detail.name"
+                  v-slot="{ open }"
+                >
                   <h3>
-                    <DisclosureButton class="group relative flex w-full items-center justify-between py-6 text-left">
-                      <span :class="[
-                        open ? 'text-indigo-600' : 'text-gray-900',
-                        'text-sm font-medium',
-                      ]">{{ detail.name }}</span>
+                    <DisclosureButton
+                      class="group relative flex w-full items-center justify-between py-6 text-left"
+                    >
+                      <span
+                        :class="[
+                          open ? 'text-indigo-600' : 'text-gray-900',
+                          'text-sm font-medium',
+                        ]"
+                        >{{ detail.name }}</span
+                      >
                       <span class="ml-6 flex items-center">
-                        <PlusIcon v-if="!open" class="block h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                          aria-hidden="true" />
-                        <MinusIcon v-else class="block h-6 w-6 text-indigo-400 group-hover:text-indigo-500"
-                          aria-hidden="true" />
+                        <PlusIcon
+                          v-if="!open"
+                          class="block h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                          aria-hidden="true"
+                        />
+                        <MinusIcon
+                          v-else
+                          class="block h-6 w-6 text-indigo-400 group-hover:text-indigo-500"
+                          aria-hidden="true"
+                        />
                       </span>
                     </DisclosureButton>
                   </h3>
@@ -142,17 +194,25 @@
           </div>
         </div>
 
-        <section aria-labelledby="related-heading" class="mt-10 border-t border-gray-200 py-16 px-4 sm:px-0">
+        <section
+          aria-labelledby="related-heading"
+          class="mt-10 border-t border-gray-200 py-16 px-4 sm:px-0"
+        >
           <h2 id="related-heading" class="text-xl font-bold text-gray-900">
             Customers also bought
           </h2>
 
-          <div class="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+          <div
+            class="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+          >
             <div v-for="product in relatedProducts" :key="product.id">
               <div class="relative">
                 <div class="relative h-72 w-full overflow-hidden rounded-lg">
-                  <img :src="product.imageSrc" :alt="product.imageAlt"
-                    class="h-full w-full object-cover object-center" />
+                  <img
+                    :src="product.imageSrc"
+                    :alt="product.imageAlt"
+                    class="h-full w-full object-cover object-center"
+                  />
                 </div>
                 <div class="relative mt-4">
                   <h3 class="text-sm font-medium text-gray-900">
@@ -160,18 +220,26 @@
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
                 </div>
-                <div class="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
-                  <div aria-hidden="true"
-                    class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50" />
+                <div
+                  class="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
+                  />
                   <p class="relative text-lg font-semibold text-white">
                     {{ product.price }}
                   </p>
                 </div>
               </div>
               <div class="mt-6">
-                <a :href="product.href"
-                  class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200">Add
-                  to bag<span class="sr-only">, {{ product.name }}</span></a>
+                <a
+                  :href="product.href"
+                  class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
+                  >Add to bag<span class="sr-only"
+                    >, {{ product.name }}</span
+                  ></a
+                >
               </div>
             </div>
           </div>
@@ -236,8 +304,8 @@ interface Product {
 }
 
 defineComponent({
-  name: 'ProductPage',
-})
+  name: "ProductPage",
+});
 
 const route = useRoute();
 const productId = computed(() => route.params.id);
@@ -253,4 +321,5 @@ const relatedProducts = computed(() =>
   )
 );
 const selectedColor = ref(product.value.colors[0]);
+document.title = product.value.name;
 </script>

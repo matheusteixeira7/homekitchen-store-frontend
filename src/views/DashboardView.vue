@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import DashboardComponent from "@/components/DashboardComponent.vue";
-import { ref, defineComponent } from "vue";
+import { defineComponent } from "vue";
 
 defineComponent({
   name: "DashboardView",

@@ -36,7 +36,7 @@
         <h1
           class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
         >
-          Home & Kitchen Decor for the Modern Home
+          Home & Kitchen Décor for the Modern Home
         </h1>
         <div class="mt-4 sm:mt-6">
           <a href="#">

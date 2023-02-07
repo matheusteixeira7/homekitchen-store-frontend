@@ -85,6 +85,18 @@
                     "name": "Angled view",
                     "src": "https://m.media-amazon.com/images/I/71FtjejRbvL._AC_SL1500_.jpg",
                     "alt": "Angled front view with bag zipped and handles upright."
+                },
+                {
+                    "id": "281b985b-f1e4-4770-b07b-b2c86191af73",
+                    "name": "Angled view",
+                    "src": "https://m.media-amazon.com/images/I/61lfUr7ZOTL._AC_SL1280_.jpg",
+                    "alt": "Angled front view with bag zipped and handles upright."
+                },
+                {
+                    "id": "56a45cb6-3c0a-4582-9db8-aeea5c864693",
+                    "name": "Angled view",
+                    "src": "https://m.media-amazon.com/images/I/71XuM1JovwL._AC_SL1280_.jpg",
+                    "alt": "Angled front view with bag zipped and handles upright."
                 }
             ],
             "colors": [
@@ -100,7 +112,7 @@
                 },
                 {
                     "name": "Washed Gray",
-                    "bgColor": "bg-gray-500",
+                    "bgColor": "bg-gray-600",
                     "selectedColor": "ring-gray-500"
                 }
             ],

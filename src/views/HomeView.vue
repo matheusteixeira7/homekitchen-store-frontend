@@ -1,5 +1,7 @@
 <template>
   <div class="bg-white">
+    <tab title="Home" />
+
     <NavbarComponent />
 
     <main>
@@ -30,4 +32,6 @@ defineComponent({
     FooterComponent,
   },
 });
+
+document.title = "Home & Kitchen Décor";
 </script>

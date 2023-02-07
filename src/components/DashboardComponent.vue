@@ -1,51 +1,25 @@
 <template>
   <div>
     <TransitionRoot as="template" :show="sidebarOpen">
-      <Dialog
-        as="div"
-        class="relative z-40 md:hidden"
-        @close="sidebarOpen = false"
-      >
-        <TransitionChild
-          as="template"
-          enter="transition-opacity ease-linear duration-300"
-          enter-from="opacity-0"
-          enter-to="opacity-100"
-          leave="transition-opacity ease-linear duration-300"
-          leave-from="opacity-100"
-          leave-to="opacity-0"
-        >
+      <Dialog as="div" class="relative z-40 md:hidden" @close="sidebarOpen = false">
+        <TransitionChild as="template" enter="transition-opacity ease-linear duration-300" enter-from="opacity-0"
+          enter-to="opacity-100" leave="transition-opacity ease-linear duration-300" leave-from="opacity-100"
+          leave-to="opacity-0">
           <div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
         </TransitionChild>
 
         <div class="fixed inset-0 z-40 flex">
-          <TransitionChild
-            as="template"
-            enter="transition ease-in-out duration-300 transform"
-            enter-from="-translate-x-full"
-            enter-to="translate-x-0"
-            leave="transition ease-in-out duration-300 transform"
-            leave-from="translate-x-0"
-            leave-to="-translate-x-full"
-          >
-            <DialogPanel
-              class="relative flex w-full max-w-xs flex-1 flex-col bg-gray-800"
-            >
-              <TransitionChild
-                as="template"
-                enter="ease-in-out duration-300"
-                enter-from="opacity-0"
-                enter-to="opacity-100"
-                leave="ease-in-out duration-300"
-                leave-from="opacity-100"
-                leave-to="opacity-0"
-              >
+          <TransitionChild as="template" enter="transition ease-in-out duration-300 transform"
+            enter-from="-translate-x-full" enter-to="translate-x-0"
+            leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0"
+            leave-to="-translate-x-full">
+            <DialogPanel class="relative flex w-full max-w-xs flex-1 flex-col bg-gray-800">
+              <TransitionChild as="template" enter="ease-in-out duration-300" enter-from="opacity-0"
+                enter-to="opacity-100" leave="ease-in-out duration-300" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="absolute top-0 right-0 -mr-12 pt-2">
-                  <button
-                    type="button"
+                  <button type="button"
                     class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    @click="sidebarOpen = false"
-                  >
+                    @click="sidebarOpen = false">
                     <span class="sr-only">Close sidebar</span>
                     <XMarkIcon class="h-6 w-6 text-white" aria-hidden="true" />
                   </button>
@@ -58,27 +32,18 @@
                   </RouterLink>
                 </div>
                 <nav class="mt-5 space-y-1 px-2">
-                  <a
-                    v-for="item in navigation"
-                    :key="item.name"
-                    :href="item.href"
-                    :class="[
+                  <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[
+                    item.current
+                      ? 'bg-gray-900 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'group flex items-center px-2 py-2 text-base font-medium rounded-md',
+                  ]">
+                    <component :is="item.icon" :class="[
                       item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'group flex items-center px-2 py-2 text-base font-medium rounded-md',
-                    ]"
-                  >
-                    <component
-                      :is="item.icon"
-                      :class="[
-                        item.current
-                          ? 'text-gray-300'
-                          : 'text-gray-400 group-hover:text-gray-300',
-                        'mr-4 flex-shrink-0 h-6 w-6',
-                      ]"
-                      aria-hidden="true"
-                    />
+                        ? 'text-gray-300'
+                        : 'text-gray-400 group-hover:text-gray-300',
+                      'mr-4 flex-shrink-0 h-6 w-6',
+                    ]" aria-hidden="true" />
                     {{ item.name }}
                   </a>
                 </nav>
@@ -87,17 +52,13 @@
                 <a href="#" class="group block flex-shrink-0">
                   <div class="flex items-center">
                     <div>
-                      <img
-                        class="inline-block h-10 w-10 rounded-full"
+                      <img class="inline-block h-10 w-10 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                        alt="" />
                     </div>
                     <div class="ml-3">
                       <p class="text-base font-medium text-white">Tom Cook</p>
-                      <p
-                        class="text-sm font-medium text-gray-400 group-hover:text-gray-300"
-                      >
+                      <p class="text-sm font-medium text-gray-400 group-hover:text-gray-300">
                         View profile
                       </p>
                     </div>
@@ -124,27 +85,18 @@
             </RouterLink>
           </div>
           <nav class="mt-5 flex-1 space-y-1 px-2">
-            <a
-              v-for="item in navigation"
-              :key="item.name"
-              :href="item.href"
-              :class="[
+            <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[
+              item.current
+                ? 'bg-gray-900 text-white'
+                : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+              'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
+            ]">
+              <component :is="item.icon" :class="[
                 item.current
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
-              ]"
-            >
-              <component
-                :is="item.icon"
-                :class="[
-                  item.current
-                    ? 'text-gray-300'
-                    : 'text-gray-400 group-hover:text-gray-300',
-                  'mr-3 flex-shrink-0 h-6 w-6',
-                ]"
-                aria-hidden="true"
-              />
+                  ? 'text-gray-300'
+                  : 'text-gray-400 group-hover:text-gray-300',
+                'mr-3 flex-shrink-0 h-6 w-6',
+              ]" aria-hidden="true" />
               {{ item.name }}
             </a>
           </nav>
@@ -153,17 +105,13 @@
           <a href="#" class="group block w-full flex-shrink-0">
             <div class="flex items-center">
               <div>
-                <img
-                  class="inline-block h-9 w-9 rounded-full"
+                <img class="inline-block h-9 w-9 rounded-full"
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="ml-3">
                 <p class="text-sm font-medium text-white">Tom Cook</p>
-                <p
-                  class="text-xs font-medium text-gray-300 group-hover:text-gray-200"
-                >
+                <p class="text-xs font-medium text-gray-300 group-hover:text-gray-200">
                   View profile
                 </p>
               </div>
@@ -173,14 +121,10 @@
       </div>
     </div>
     <div class="flex flex-1 flex-col md:pl-64">
-      <div
-        class="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden"
-      >
-        <button
-          type="button"
+      <div class="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
+        <button type="button"
           class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-          @click="sidebarOpen = true"
-        >
+          @click="sidebarOpen = true">
           <span class="sr-only">Open sidebar</span>
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
